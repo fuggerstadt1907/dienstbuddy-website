@@ -11,20 +11,81 @@
     <link rel="icon" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="landing">
     <header>
       <img src="icon.png" alt="" />
       <a href="./">DienstBuddy</a>
     </header>
 
-    <main>
-      <h1>Dein Dienstplan für den Rettungsdienst</h1>
-      <p>
-        DienstBuddy hilft dir, deine Schichten zu planen, deine Arbeitszeit im Blick zu behalten
-        und dich mit deinem Team abzustimmen, z. B. beim Schichttausch. Kostenlos, ohne Werbung
-        und ohne Tracking.
-      </p>
+    <section class="hero">
+      <div class="hero-text">
+        <span class="eyebrow">Für den Rettungsdienst</span>
+        <h1>Dein Dienstplan.<br />Immer dabei.</h1>
+        <p class="lead">
+          DienstBuddy hilft dir, deine Schichten zu planen, deine Arbeitszeit im Blick zu behalten
+          und dich mit deinem Team abzustimmen, z. B. beim Schichttausch.
+        </p>
+        <ul class="pills">
+          <li>Kostenlos</li>
+          <li>Ohne Werbung</li>
+          <li>Ohne Tracking</li>
+        </ul>
+        <p class="muted small">Bald für iPhone im App Store.</p>
+      </div>
 
+      <div class="hero-phones">
+        <div class="phone phone-left">
+          <img src="img/dienstplan.jpg" alt="Dienstplan mit Monatsansicht und Schichten" />
+        </div>
+        <div class="phone phone-right">
+          <img src="img/zeiten.jpg" alt="Zeiterfassung mit Monatsübersicht" />
+        </div>
+        <div class="phone phone-center">
+          <img src="img/dashboard.jpg" alt="Dashboard mit heutiger Schicht und Wochenübersicht" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+        </div>
+        <h3>Dienstplan</h3>
+        <p>Schichten in Sekunden eintragen, mit Vorlagen für Früh, Spät, Nacht und 24 Stunden.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+        </div>
+        <h3>Zeiterfassung</h3>
+        <p>Ein- und ausstempeln, Überstunden und Monatsübersicht immer aktuell.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <h3>Teams</h3>
+        <p>Sieh, wer mit dir Dienst hat. Du entscheidest, was dein Team von dir sieht.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 24 24">
+            <path d="m17 2 4 4-4 4" /><path d="M3 11V9a4 4 0 0 1 4-4h14" />
+            <path d="m7 22-4-4 4-4" /><path d="M21 13v2a4 4 0 0 1-4 4H3" />
+          </svg>
+        </div>
+        <h3>Schichttausch</h3>
+        <p>Biete Schichten im Team an und tausch sie unkompliziert, mit Push-Benachrichtigung.</p>
+      </div>
+    </section>
+
+    <main>
       <h2 id="support">Support</h2>
       <p>
         Du hast eine Frage, einen Fehler gefunden oder eine Idee? Schreib uns an
