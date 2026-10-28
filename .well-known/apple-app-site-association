@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BDSDYM5BLN.com.ao.dienstbuddy",
+        "appIDs": ["BDSDYM5BLN.com.ao.dienstbuddy"],
+        "paths": ["/join", "/join/*"],
+        "components": [{ "/": "/join" }, { "/": "/join/*" }]
+      }
+    ]
+  }
+}

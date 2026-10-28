@@ -1,0 +1,3 @@
+# GitHub Pages (Jekyll) ignoriert Ordner mit Punkt; .well-known enthält die
+# apple-app-site-association für die Universal Links der App (dienstbuddy.app/join/…)
+include: [".well-known"]

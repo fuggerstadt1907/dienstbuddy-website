@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Organisation beitreten – DienstBuddy</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Einladung zu einer Organisation in DienstBuddy." />
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icon.png" alt="" />
+      <a href="../">DienstBuddy</a>
+    </header>
+
+    <main>
+      <h1>Du bist eingeladen</h1>
+      <p>
+        Jemand hat dich zu einer Organisation in DienstBuddy eingeladen. Öffne die Einladung in
+        der App, dann trittst du der Organisation bei und fragst den Beitritt zu deiner Wache an.
+      </p>
+
+      <p id="code-box" hidden>
+        Dein Code: <strong id="code" style="letter-spacing: 3px; font-size: 1.3rem"></strong>
+      </p>
+
+      <p><a id="open-app" href="dienstbuddy://">In DienstBuddy öffnen</a></p>
+
+      <h2>Noch keine App?</h2>
+      <p>
+        Lade DienstBuddy kostenlos aus dem
+        <a href="https://apps.apple.com/app/id6748256720">App Store</a>, registriere dich und öffne
+        danach diesen Link noch einmal. Alternativ trägst du den Code in der App unter
+        <em>Wachen → Beitreten → Organisation beitreten</em> ein.
+      </p>
+    </main>
+
+    <footer>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../nutzungsbedingungen.html">Nutzungsbedingungen</a>
+    </footer>
+
+    <script>
+      // Code aus ?code=… anzeigen und in den App-Link übernehmen (nur Buchstaben und Ziffern)
+      var code = (new URLSearchParams(location.search).get('code') || '').replace(/[^A-Za-z0-9]/g, '')
+      if (code) {
+        document.getElementById('code').textContent = code
+        document.getElementById('code-box').hidden = false
+        document.getElementById('open-app').href = 'dienstbuddy://join/' + code
+      }
+    </script>
+  </body>
+</html>
