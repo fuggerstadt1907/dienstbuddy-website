@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wache beitreten – DienstBuddy</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Einladung zu einer Wache in DienstBuddy." />
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icon.png" alt="" />
+      <a href="../">DienstBuddy</a>
+    </header>
+
+    <main>
+      <h1>Du bist eingeladen</h1>
+      <p>
+        Jemand hat dich zu einer Wache in DienstBuddy eingeladen. Öffne die Einladung in der App,
+        dann trittst du der Wache direkt bei.
+      </p>
+
+      <p><a id="open-app" href="dienstbuddy://">In DienstBuddy öffnen</a></p>
+
+      <h2>Noch keine App?</h2>
+      <p>
+        Lade DienstBuddy kostenlos aus dem
+        <a href="https://apps.apple.com/app/id6748256720">App Store</a>, registriere dich und öffne
+        danach diesen Link noch einmal. Alternativ kopierst du den Link und fügst ihn in der App
+        unter <em>Wachen → + → Wache beitreten</em> ein.
+      </p>
+
+      <p id="code-box" hidden>
+        Code der Wache: <strong id="code" style="letter-spacing: 3px; font-size: 1.3rem"></strong>
+      </p>
+    </main>
+
+    <footer>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../nutzungsbedingungen.html">Nutzungsbedingungen</a>
+    </footer>
+
+    <script>
+      // Wachen-ID (UUID) und Code aus ?id=…&code=… in den App-Link übernehmen
+      var params = new URLSearchParams(location.search)
+      var id = (params.get('id') || '').toLowerCase()
+      var code = (params.get('code') || '').replace(/[^A-Za-z0-9]/g, '')
+      if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(id)) {
+        document.getElementById('open-app').href = 'dienstbuddy://team/' + id + (code ? '/' + code : '')
+      }
+      if (code) {
+        document.getElementById('code').textContent = code
+        document.getElementById('code-box').hidden = false
+      }
+    </script>
+  </body>
+</html>

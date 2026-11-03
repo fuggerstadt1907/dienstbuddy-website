@@ -4,13 +4,36 @@
     "details": [
       {
         "appID": "BDSDYM5BLN.com.ao.dienstbuddy",
-        "appIDs": ["BDSDYM5BLN.com.ao.dienstbuddy"],
-        "paths": ["/join", "/join/*", "/connect", "/connect/*"],
+        "appIDs": [
+          "BDSDYM5BLN.com.ao.dienstbuddy"
+        ],
+        "paths": [
+          "/join",
+          "/join/*",
+          "/connect",
+          "/connect/*",
+          "/team",
+          "/team/*"
+        ],
         "components": [
-          { "/": "/join" },
-          { "/": "/join/*" },
-          { "/": "/connect" },
-          { "/": "/connect/*" }
+          {
+            "/": "/join"
+          },
+          {
+            "/": "/join/*"
+          },
+          {
+            "/": "/connect"
+          },
+          {
+            "/": "/connect/*"
+          },
+          {
+            "/": "/team"
+          },
+          {
+            "/": "/team/*"
+          }
         ]
       }
     ]
