@@ -85,6 +85,11 @@ footer a {
   margin-right: 16px;
 }
 
+.trademarks {
+  margin: 12px 0 0;
+  font-size: 0.75rem;
+}
+
 /* ---------- Startseite ---------- */
 
 .landing {
