@@ -162,6 +162,32 @@ footer a {
   color: var(--accent);
 }
 
+/* Store-Badges: das Google-PNG hat rundum transparenten Rand, deshalb größer + negativer Rand */
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.store-badges a {
+  display: block;
+  line-height: 0;
+}
+
+.badge-apple {
+  height: 48px;
+  width: auto;
+}
+
+.badge-google {
+  height: 63px;
+  width: auto;
+  margin: -7.5px -1px;
+}
+
 .small {
   font-size: 0.9rem;
 }
@@ -277,6 +303,10 @@ footer a {
   }
 
   .pills {
+    justify-content: center;
+  }
+
+  .store-badges {
     justify-content: center;
   }
 
